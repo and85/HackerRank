@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution
+{
+    static string SortTail(char[] tail)
+    {
+        Console.WriteLine(tail);
+
+        return string.Empty;
+    }
+
+    static string Rearrange(string inputString)
+    {
+        char[] input = inputString.ToCharArray();
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        for (int j = i - 1; j >= 0; j--)
+        {
+            if (input[i] > input[j])
+            {
+                char temp;
+                temp = input[j];
+                input[j] = input[i];
+                input[i] = temp;
+
+                char[] tail = new char[input.Length - i + 1];
+                Array.Copy(input, i, tail, 0, tail.Length);
+
+               SortTail(tail);
+
+                return new string(input);
+            }
+        }
+
+        return "no answer";
+    }
+
+    // https://www.hackerrank.com/challenges/bigger-is-greater
+    static void Main(String[] args)
+    {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        int t = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i < t; i++ )
+        {
+            string w = Console.ReadLine();
+            Console.WriteLine(Rearrange(w));
+        }
+    }
+}
