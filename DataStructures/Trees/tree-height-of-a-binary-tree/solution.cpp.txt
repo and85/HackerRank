@@ -1,0 +1,43 @@
+//https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree
+/*The tree node has data, left child and right child 
+class Node {
+    int data;
+    Node* left;
+    Node* right;
+};
+
+*/
+    int getHeight(Node* root) {
+        if (root == NULL)
+        {
+            return -1;
+        }
+
+        int left = getHeight(root->left);
+        int right = getHeight(root->right); 
+
+        return 1 + std::max(left, right);
+    }
+  }; //End of Solution
+
+int main() {
+    Solution myTree;
+    Node* root = NULL;
+    int t;
+    int data;
+
+    cin >> t;
+
+    while(t-- > 0){
+        cin >> data;
+        root = myTree.insert(root, data);
+    }
+    int height = myTree.getHeight(root);
+    cout << height;
+
+    return 0;
+}
+    
+       
+            
+        
