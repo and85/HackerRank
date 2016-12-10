@@ -1,0 +1,25 @@
+/*
+Detect a cycle in a linked list. Note that the head pointer may be 'null' if the list is empty.
+
+A Node is defined as: 
+    class Node {
+        int data;
+        Node next;
+    }
+*/
+// https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle
+boolean hasCycle(Node head) 
+{
+    Node fastPointer = head; 
+    Node slowPointer = head; 
+
+    while (fastPointer!= null && fastPointer.next != null)
+    { 
+        fastPointer = fastPointer.next.next; 
+        slowPointer = slowPointer.next; 
+
+        if(fastPointer == slowPointer ) return true; 
+    } 
+
+    return false;
+}
