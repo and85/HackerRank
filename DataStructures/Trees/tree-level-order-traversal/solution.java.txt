@@ -1,0 +1,46 @@
+   /* 
+    
+    class Node 
+       int data;
+       Node left;
+       Node right;
+   */
+// https://www.hackerrank.com/challenges/tree-level-order-traversal
+void LevelOrder(Node root)
+{
+    int h = GetHeight(root);
+    int i;
+    
+    for (i=1; i<=h; i++)
+        PrintLevel(root, i);
+}
+
+int GetHeight(Node root)
+{
+    if (root == null)
+        return 0;    
+        
+    int lHeight = GetHeight(root.left);
+    int rHeight = GetHeight(root.right);
+
+    if (lHeight > rHeight)
+        return(lHeight + 1);
+    else 
+        return(rHeight + 1); 
+    
+}
+
+void PrintLevel(Node root ,int level)
+{
+    if (root == null)
+        return;
+    
+    if (level == 1)
+        System.out.print(root.data + " ");
+    else
+    {
+        PrintLevel(root.left, level - 1);
+        PrintLevel(root.right, level - 1);
+    }
+}
+
