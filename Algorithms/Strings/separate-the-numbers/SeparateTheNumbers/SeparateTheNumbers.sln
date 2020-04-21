@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeparateTheNumbers", "SeparateTheNumbers\SeparateTheNumbers.csproj", "{0E2CF304-5BE0-4F8C-A663-0EAE98BFCE59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeparateTheNumbersTests", "SeparateTheNumbersTests\SeparateTheNumbersTests.csproj", "{49BD4267-4815-44D8-976C-D10BDFF80FDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E2CF304-5BE0-4F8C-A663-0EAE98BFCE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2CF304-5BE0-4F8C-A663-0EAE98BFCE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2CF304-5BE0-4F8C-A663-0EAE98BFCE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2CF304-5BE0-4F8C-A663-0EAE98BFCE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BD4267-4815-44D8-976C-D10BDFF80FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BD4267-4815-44D8-976C-D10BDFF80FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BD4267-4815-44D8-976C-D10BDFF80FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BD4267-4815-44D8-976C-D10BDFF80FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
